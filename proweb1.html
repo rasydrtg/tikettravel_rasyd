@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pemesanan Tiket Travel</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+      form {
+        width: 50%;
+      }
+      .form-section {
+        margin-bottom: 15px;
+      }
+      label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      input[type="number"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+      .services {
+        margin-top: 10px;
+      }
+      .services input {
+        margin-right: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .file-upload {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form Pemesanan Tiket Travel</h1>
+    <div class="container">
+      <form>
+        <div class="form-section">
+          <label for="nama">Nama Penumpang:</label>
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Nama lengkap"
+            required
+          />
+        </div>
+        <div class="form-section">
+          <label for="email">Email Penumpang:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="qwerty123@gmail.com"
+            required
+          />
+        </div>
+        <div class="form-section">
+          <label for="hp">Nomor HP:</label>
+          <input
+            type="text"
+            id="hp"
+            name="hp"
+            placeholder="Contoh: 081234567890"
+            required
+          />
+        </div>
+        <div class="form-section">
+          <label for="destinasi">Destinasi:</label>
+          <select id="destinasi" name="destinasi" required>
+            <option value="">-- Pilih Destinasi --</option>
+            <option value="bandung">Bandung</option>
+            <option value="jakarta">Jakarta</option>
+            <option value="yogyakarta">Yogyakarta</option>
+          </select>
+        </div>
+        <div class="form-section">
+          <label for="tanggal-berangkat">Tanggal Berangkat:</label>
+          <input
+            type="date"
+            id="tanggal-berangkat"
+            name="tanggal-berangkat"
+            required
+          />
+        </div>
+        <div class="form-section">
+          <label for="waktu-berangkat">Waktu Berangkat:</label>
+          <input
+            type="time"
+            id="waktu-berangkat"
+            name="waktu-berangkat"
+            required
+          />
+        </div>
+        <div class="form-section">
+          <label for="jumlah-penumpang">Jumlah Penumpang:</label>
+          <input
+            type="number"
+            id="jumlah-penumpang"
+            name="jumlah-penumpang"
+            required
+          />
+        </div>
+        <div class="form-section">
+          <label>Pilihan Armada:</label>
+          <input type="radio" id="mobil-bus" name="armada" value="mobil-bus" />
+          <label for="mobil-bus">Mobil Bus</label><br />
+          <input type="radio" id="pesawat" name="armada" value="pesawat" />
+          <label for="pesawat">Pesawat</label><br />
+          <input
+            type="radio"
+            id="kereta-api"
+            name="armada"
+            value="kereta-api"
+          />
+          <label for="kereta-api">Kereta Api</label><br />
+          <input
+            type="radio"
+            id="kereta-laut"
+            name="armada"
+            value="kereta-laut"
+          />
+          <label for="kereta-laut">Kereta Laut</label>
+        </div>
+        <div class="form-section services">
+          <label>Layanan Tambahan:</label>
+          <input
+            type="checkbox"
+            id="makanan-minuman"
+            name="layanan[]"
+            value="Makanan & Minuman"
+          />
+          <label for="makanan-minuman">Makanan & Minuman</label><br />
+          <input
+            type="checkbox"
+            id="antar-jemput"
+            name="layanan[]"
+            value="Jasa Antar Jemput"
+          />
+          <label for="antar-jemput">Jasa Antar Jemput</label><br />
+          <input
+            type="checkbox"
+            id="pemilihan-kursi"
+            name="layanan[]"
+            value="Pemilihan Kursi"
+          />
+          <label for="pemilihan-kursi">Pemilihan Kursi</label>
+        </div>
+        <div class="form-section file-upload">
+          <label for="ktp">Upload Identitas (KTP):</label>
+          <input
+            type="file"
+            id="ktp"
+            name="ktp"
+            accept=".jpg,.jpeg,.png,.pdf"
+          />
+        </div>
+        <button type="submit">Pesan Tiket</button>
+      </form>
+    </div>
+  </body>
+</html>
